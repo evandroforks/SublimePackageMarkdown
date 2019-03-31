@@ -734,7 +734,7 @@ contexts:
         1: punctuation.definition.link.begin.markdown
         2: markup.underline.link.markdown
         3: punctuation.definition.link.end.markdown
-    - match: (((https|http|ftp)://)|www\.)[\w-]+(\.[\w-]+)+
+    - match: (((https|http|ftp)://)|www\.)[\w-]+(\.[\w-]+)*
       scope: markup.underline.link.markdown-gfm
       push: # After a valid domain, zero or more non-space non-< characters may follow
         - match: (?=[?!.,:*_~]*[\s<]) # Trailing punctuation (specifically, ?, !, ., ,, :, *, _, and ~) will not be considered part of the autolink, though they may be included in the interior of the link
